@@ -1,0 +1,33 @@
+FORMAT: 1A
+HOST: http://api.domain.com/
+
+# QR-CODE Micro service 
+
+Micro service for generating QR codes
+
+## QR Code [/qr/create{?size,data,format}]
+
+### create  [GET][POST]
++ Parameters
+
+    + size (number, required)
+    
+        Minimum value:
+        10 px
+        Maximal value:
+        1000 (if format=png|gif|jpeg|jpg),
+        1000000 (if format=svg|eps)
+        
+    + data (string, required) 
+    
+    + format (enum[string], optional)
+
+        format parameter (optional) , default png.
+
+        + Members
+            + `png`
+            + `jpeg`
+            + `svg`
+            + `pdf`            
+            
++ Response 200
