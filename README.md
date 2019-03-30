@@ -3,7 +3,7 @@ Micro service for generating QR codes
 
 
 #Api Documentation : 
-(https://qrms.docs.apiary.io)
+(https://qr2.docs.apiary.io)
 
 #TODO :  
-(https://github.com/hermntech/qr-ms/blob/master/todo.md)
+(https://github.com/hermntech/qr-code/blob/master/todo.md)
