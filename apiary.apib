@@ -5,29 +5,42 @@ HOST: http://api.domain.com/
 
 Micro service for generating QR codes
 
-## QR Code [/qr/create{?size,data,format}]
+## QR Code [/qr/create{?size,data,format,color,bgcolor}]
 
-### create  [GET][POST]
+### create  [GET]
+
 + Parameters
 
-    + size (number, required)
-    
+    + size (number)
         Minimum value:
         10 px
         Maximal value:
         1000 (if format=png|gif|jpeg|jpg),
         1000000 (if format=svg|eps)
+
+    + data (string) 
         
-    + data (string, required) 
-    
+        The text to store within the QR code (URL encoded, PHP programmers may use urlencode()).
+        
     + format (enum[string], optional)
 
-        format parameter (optional) , default png.
+        Set file format, default PNG.
 
         + Members
             + `png`
             + `jpeg`
             + `svg`
-            + `pdf`            
+            + `pdf`  
             
-+ Response 200
+    + color (string, optional)
+        
+        Set Text color  as RGB value, default #000000.
+            
+    + bgcolor (string, optional)
+        
+        Set backgroud color as RGB value, default #ffffff. 
+        
+        
++ Response 200 (image/png)
+
++ Response 400
